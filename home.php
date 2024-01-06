@@ -1,0 +1,2 @@
+<h1>Welcome Home</h1>
+<p>Kantin kampus Politeknik Negeri Padang adalah tempat di kampus universitas atau institusi pendidikan lainnya yang menyediakan makanan dan minuman untuk mahasiswa.kantin kampus dapat menjadi tempat populer bagi anggota komunitas kampus untuk bersosialisasi,makan siang,atau sekedar mengambil cemilan.menu kantin kampus bisa bervariasi,mencakup berbagai jenis makanan dan minuman untuk memenuhi selera beragam.</p>
