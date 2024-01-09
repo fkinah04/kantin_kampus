@@ -1,35 +1,29 @@
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-       
-       <h1 class="h2">Menu</h1>
-         </div> 
-<h3>List Data Menu</h3>
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">ID</th>
-                                <th scope="col">Nama Menu</th>
-                                <th scope="col">Harga</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                           
-                            $tampil = mysqli_query($db, "select * from menu");
-                            $no = 1;
-                            while ($data = mysqli_fetch_array($tampil)) {
-                            ?>
-                                <tr>
-                                    <th scope="row"><?php echo $no++; ?></th>
-                                    <td><?php echo $data['id']; ?></td>
-                                    <td><?php echo $data['nama']; ?></td>
-                                    <td><?php echo $data['harga']; ?></td>
-                                </tr>
-                            <?php
-                            $no++;
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
+<div class="row tm-gallery" style="margin-top: 60px;">
+    <!-- gallery page 1 -->
+    <div id="tm-gallery-page-pizza" class="tm-gallery-page">
+        <?php
+                           include("koneksi.php");
+        $tampil = mysqli_query($db, "select * from menu");
+        $no = 1;
+
+        while ($data = mysqli_fetch_array($tampil)) {
+            ?>
+
+        <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <figure>
+                <img src="img/<?= $data['gambar']?>" alt="Image" class="img-fluid tm-gallery-img" />
+                <figcaption>
+                    <h4 class="tm-gallery-title"><?= $data['nama']?></h4>
+                    <p class="tm-gallery-description"><?= $data['deskripsi'] ?></p>
+                    <p class="tm-gallery-price"><?= $data['harga']?></p>
+                </figcaption>
+            </figure>
+        </article>
+        <?php
+             $no++;
+        }
+        ?>
+
+    </div> <!-- gallery page 1 -->
+
+</div> <!-- gallery page 3 -->
