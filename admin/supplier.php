@@ -81,28 +81,27 @@
             # code...
 ?>
 
-    <?php
+<?php
         $ambil=mysqli_query($db,"SELECT * FROM supplier WHERE id='$_GET[id_edit]'");
         $data=mysqli_fetch_array($ambil);
     ?>
-    <h4>Form Edit Menu</h4>
+    <h4>Form Edit Supplier</h4>
     <div class="row">
         <div class="col-md-6">
         <form action="proses_supplier.php?aksi=update" method="post" >
-        <div class="mb-3">
+            <div class="mb-3">
                 <label for="id" class="form-label">ID</label>
-                <input type="number" class="form-control" id="id" name="id" >
+                <input type="number" class="form-control" id="id" name="id" value="<?=$data['id'] ?>">
             </div>
 
             <div class="mb-3">
-                <label for="nama" class="form-label">Nama Supplier</label>
-                <input type="text" class="form-control" id="nama" name="nama">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" value="<?=$data['nama'] ?>" >
             </div>
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat</label>
-                <textarea class="form-control" rows="3" name="alamat" id="alamat" ></textarea>
+                <textarea class="form-control" rows="3" name="alamat" id="alamat" value="<?=$data['alamat'] ?>" ></textarea>
             </div>
-           
             <div class="mb-3">
                 <input type="submit" class="btn btn-primary" name="submit" value="Update">
             </div>

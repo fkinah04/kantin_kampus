@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Simple House Template</title>
+    <title>Kantin Kampus</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
 	<link href="css/templatemo-style.css" rel="stylesheet" />
 </head>
@@ -55,241 +55,109 @@ https://templatemo.com/tm-539-simple-house
 			<div class="row tm-gallery">
 				<!-- gallery page 1 -->
 				<div id="tm-gallery-page-pizza" class="tm-gallery-page">
+				<?php
+                           include("../koneksi.php");
+						   $tampil = mysqli_query($db, "select * from menu");
+						   $no = 1;
+
+						   while ($data = mysqli_fetch_array($tampil)) {
+						   ?>
+
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/01.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar2.jpeg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Nasi Goreng</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$45 / $55</p>
+								<h4 class="tm-gallery-title"><?= $data['nama']?></h4>
+								<p class="tm-gallery-description">Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu </p>
+								<p class="tm-gallery-price">Rp. 10.000</p>
+							</figcaption>
+						</figure>
+					</article>
+					<?php
+                            $no++;
+                            }
+                            ?>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/gambar3.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Ayam Penyet</h4>
+								<p class="tm-gallery-description">Ayam penyet adalah hidangan Ayam goreng Indonesia, serta disajikan dengan sambal, potongan-potongan timun, tahu goreng dan tempe.</p>
+								<p class="tm-gallery-price">Rp. 15.000 </p>
 							</figcaption>
 						</figure>
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/02.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar5.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Aliquam sagittis</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$65 / $70</p>
+								<h4 class="tm-gallery-title">Mie Goreng</h4>
+								<p class="tm-gallery-description">Mie goreng berarti "mi yang digoreng" adalah hidangan mie yang dimasak dengan digoreng tumis khas Indonesia.</p>
+								<p class="tm-gallery-price">Rp. 8.000</p>
 							</figcaption>
 						</figure>
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar6.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Sed varius turpis</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$30.50</p>
+								<h4 class="tm-gallery-title">Ayam Bakar</h4>
+								<p class="tm-gallery-description">	Ayam yang dibumbui dengan kunyit, bawang putih, bawang merah dan rempah-rempah lainnya, dipanggang di atas arang</p>
+								<p class="tm-gallery-price">Rp. 16.000</p>
 							</figcaption>
 						</figure>
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar1.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Aliquam sagittis</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$25.50</p>
+								<h4 class="tm-gallery-title">Pecel Ayam</h4>
+								<p class="tm-gallery-description">Pecel ayam atau pecek ayam di Indonesia adalah nama sebuah makanan khas Jawa yang terdiri dari ayam ungkep dan sambal tomat.</p>
+								<p class="tm-gallery-price">Rp. 15.000</p>
 							</figcaption>
 						</figure>
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar4.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Maecenas eget justo</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$80.25</p>
+								<h4 class="tm-gallery-title">Pecel Lele</h4>
+								<p class="tm-gallery-description">Pecel lele atau pecek lele atau penyetan adalah makanan khas Jawa Timur, yang terdiri dari ikan lele dan sambal tomat.</p>
+								<p class="tm-gallery-price">Rp. 15.000</p>
 							</figcaption>
 						</figure>
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/06.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar7.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Quisque et felis eros</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$20 / $40 / $60</p>
+								<h4 class="tm-gallery-title">Lontong Sayur</h4>
+								<p class="tm-gallery-description">Lontong ini identik dengan kuah santan yang memiliki bumbu kental khas masakan Minang. </p>
+								<p class="tm-gallery-price">Rp. 8.000</p>
 							</figcaption>
 						</figure>
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/gambar9.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">Sed ultricies dui</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$94</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Donec porta consequat</h4>
-								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-								<p class="tm-gallery-price">$15</p>
+								<h4 class="tm-gallery-title">Makanan Ampera</h4>
+								<p class="tm-gallery-description">Ampera menyajikan menu-menu khas Sunda seperti nasi liwet, nasi timbel, gepuk, ayam bakar, ayam kecap, bacem, aneka pepes, dan lainnya. </p>
+								<p class="tm-gallery-price">Rp. 13.000</p>
 							</figcaption>
 						</figure>
 					</article>
 				</div> <!-- gallery page 1 -->
 				
-				<!-- gallery page 2 -->
-				<div id="tm-gallery-page-salad" class="tm-gallery-page hidden">
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Salad Menu One</h4>
-								<p class="tm-gallery-description">Proin eu velit egestas, viverra sapien eget, consequat nunc. Vestibulum tristique</p>
-								<p class="tm-gallery-price">$25</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Second Title Salad</h4>
-								<p class="tm-gallery-description">Proin eu velit egestas, viverra sapien eget, consequat nunc. Vestibulum tristique</p>
-								<p class="tm-gallery-price">$30</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Third Salad Item</h4>
-								<p class="tm-gallery-description">Proin eu velit egestas, viverra sapien eget, consequat nunc. Vestibulum tristique</p>
-								<p class="tm-gallery-price">$45</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/01.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Superior Salad</h4>
-								<p class="tm-gallery-description">Proin eu velit egestas, viverra sapien eget, consequat nunc. Vestibulum tristique</p>
-								<p class="tm-gallery-price">$50</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Sed ultricies dui</h4>
-								<p class="tm-gallery-description">Proin eu velit egestas, viverra sapien eget, consequat nunc. Vestibulum tristique</p>
-								<p class="tm-gallery-price">$55 / $60</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Maecenas eget justo</h4>
-								<p class="tm-gallery-description">Proin eu velit egestas, viverra sapien eget, consequat nunc. Vestibulum tristique</p>
-								<p class="tm-gallery-price">$75</p>
-							</figcaption>
-						</figure>
-					</article>
-				</div> <!-- gallery page 2 -->
-				
-				<!-- gallery page 3 -->
-				<div id="tm-gallery-page-noodle" class="tm-gallery-page hidden">
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Noodle One</h4>
-								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								<p class="tm-gallery-price">$12.50</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Noodle Second</h4>
-								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								<p class="tm-gallery-price">$15.50</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/06.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Third Soft Noodle</h4>
-								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								<p class="tm-gallery-price">$20.50</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Aliquam sagittis</h4>
-								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								<p class="tm-gallery-price">$30.25</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Maecenas eget justo</h4>
-								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								<p class="tm-gallery-price">$35.50</p>
-							</figcaption>
-						</figure>
-					</article>
-					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Quisque et felis eros</h4>
-								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-								<p class="tm-gallery-price">$40.50</p>
-							</figcaption>
-						</figure>
-					</article>
-
 				</div> <!-- gallery page 3 -->
 			</div>
-			<div class="tm-section tm-container-inner">
-				<div class="row">
-					<div class="col-md-6">
-						<figure class="tm-description-figure">
-							<img src="img/img-01.jpg" alt="Image" class="img-fluid" />
-						</figure>
-					</div>
-					<div class="col-md-6">
-						<div class="tm-description-box"> 
-							<h4 class="tm-gallery-title">Maecenas nulla neque</h4>
-							<p class="tm-mb-45">Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a rel="nofollow" href="https://templatemo.com/contact">talk to us</a> for additional permissions about our templates. Thank you.</p>
-							<a href="about.html" class="tm-btn tm-btn-default tm-right">Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-
 		<footer class="tm-footer text-center">
-			<p>Copyright &copy; 2020 Simple House 
+			<p>Copyright &copy; 2024 Kantin Kampus 
             
-            | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+            | Design: <a rel="nofollow" href="https://templatemo.com">Fitri Sakinah</a></p>
 		</footer>
 	</div>
+	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/parallax.min.js"></script>
 	<script>

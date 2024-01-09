@@ -117,7 +117,7 @@
 ?>
 
     <?php
-        $ambil=mysqli_query($db,"SELECT * FROM pegawai WHERE id='$_GET[id_edit]'");
+        $ambil=mysqli_query($db,"SELECT * FROM pembayaran WHERE id='$_GET[id_edit]'");
         $data=mysqli_fetch_array($ambil);
     ?>
     <h4>Form Edit Pembayaran</h4>
