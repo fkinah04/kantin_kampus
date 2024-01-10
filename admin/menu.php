@@ -119,7 +119,7 @@ switch ($proses) {
             </div>
             <div class="mb-3">
                 <label for="deskripsi" class="form-label">Deskripsi</label>
-                <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10"></textarea>
+                <textarea class="form-control" name="deskripsi" id="deskripsi" cols="30" rows="10"><?=$data['deskripsi'] ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="harga" class="form-label">Harga</label>
