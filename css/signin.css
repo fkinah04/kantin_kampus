@@ -9,11 +9,18 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #f5f5f5;
+  background-image: url("../img/Politeknik-Negeri-Padang.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .form-signin {
-  max-width: 330px;
-  padding: 15px;
+  max-width: 500px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  padding: 80px;
 }
 
 .form-signin .form-floating:focus-within {
